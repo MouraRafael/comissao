@@ -10,7 +10,7 @@ export class CalculaComissaoComponent implements OnInit {
     salario:0,
     comissaoVenda:0,
     qtdCarrosVendidos:0,
-    comissaoTotal: 'Não Aplicavel'
+    comissaoTotal: 0
   }
   constructor() { }
 
@@ -32,8 +32,8 @@ export class CalculaComissaoComponent implements OnInit {
     this.data.qtdCarrosVendidos = num;
   }
 
-  calcula(sal:number,comissao:number, qtd:number){
-
+  calcula(){
+    this.data.comissaoTotal = this.data.salario+(this.data.comissaoVenda*this.data.qtdCarrosVendidos);
   }
 
 }

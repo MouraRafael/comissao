@@ -34,7 +34,9 @@
             (keyup)="atualizaCarros(qtdCarrosVendidos.value)"
             type="number" [value]="data.qtdCarrosVendidos">
 
-            <button >Calcular</button>
+            <button
+            (click)="calcula()"
+            >Calcular</button>
         </div>
     </section>
     
