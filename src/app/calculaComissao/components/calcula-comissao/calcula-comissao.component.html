@@ -14,25 +14,28 @@
     </header>
     <section class="container">
         <div class="box">
-            <p>Valor Salário: {{data.salario}}</p>            
-            <p>Valor comissao: {{data.comissaoVenda}}</p>            
-            <p>Quantidade de Carros: {{data.qtdCarrosVendidos}}</p> 
-            <p>Comissao total: {{data.comissaoTotal}}</p>           
+            <div>
+                <label for="salario">Digite o Valor Base do salário</label>
+                <input 
+                #salInput
+                (keyup)="atualizaSalario(salInput.value)" type="number" [value]="data.salario" id="salario">
+            </div>
 
-            <input 
-            #salInput
-            (keyup)="atualizaSalario(salInput.value)" type="number" [value]="data.salario">
+            <div>
+                <label for="comissao">Digite o valor da comissão por venda</label>
+                <input
+                #comissaoInput
+                (keyup)="atualizaComissao(comissaoInput.value)"
+                type="number" [value]="data.comissaoVenda" id="comissao">
+            </div>
 
-            <input
-            #comissaoInput
-            (keyup)="atualizaComissao(comissaoInput.value)"
-            type="number" [value]="data.comissaoVenda">
-
-
-            <input
-            #qtdCarrosVendidos
-            (keyup)="atualizaCarros(qtdCarrosVendidos.value)"
-            type="number" [value]="data.qtdCarrosVendidos">
+            <div>
+                <label for="qtdCarros">Digite a quantidade de carros vendidos</label>
+                <input
+                #qtdCarrosVendidos
+                (keyup)="atualizaCarros(qtdCarrosVendidos.value)"
+                type="number" [value]="data.qtdCarrosVendidos">
+            </div>
 
             <button
             (click)="calcula()"
