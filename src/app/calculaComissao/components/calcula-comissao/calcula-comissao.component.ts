@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-calcula-comissao',
   templateUrl: './calcula-comissao.component.html',
-  styleUrls: ['./calcula-comissao.component.css']
+  styleUrls: ['./calcula-comissao.reset.css','./calcula-comissao.component.css']
 })
 export class CalculaComissaoComponent implements OnInit {
   data={
