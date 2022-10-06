@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Comissão</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="titulo">
+            <h1>Calcula Comissão</h1>
+        </div>
+    </header>
+    <section class="container">
+        <div class="box">
+            <p>Valor Salário: {{data.salario}}</p>            
+            <p>Valor comissao: {{data.comissaoVenda}}</p>            
+            <p>Quantidade de Carros: {{data.qtdCarrosVendidos}}</p> 
+            <p>Comissao total: {{data.comissaoTotal}}</p>           
+
+            <input 
+            #salInput
+            (keyup)="atualizaSalario(salInput.value)" type="number" [value]="data.salario">
+
+            <input
+            #comissaoInput
+            (keyup)="atualizaComissao(comissaoInput.value)"
+            type="number" [value]="data.comissaoVenda">
+
+
+            <input
+            #qtdCarrosVendidos
+            (keyup)="atualizaCarros(qtdCarrosVendidos.value)"
+            type="number" [value]="data.qtdCarrosVendidos">
+
+            <button >Calcular</button>
+        </div>
+    </section>
+    
+</body>
+</html>
